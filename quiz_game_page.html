@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>The Math Quiz Game</title>
+  
+
+<meta name="viewport" content="width=device-width, initial-scale==1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="game.css">
+</head>
+<body>
+<br>
+<h4 id="player1_name"></h4>:<h4 id="player1_score"></h4>
+<br>
+<h4 id="player2_name"></h4>:<h4 id="player2_score"></h4>
+
+<script>
+  document.getElementById("player1_name").innerHTML = localStorage.getItem("player1_name");
+  document.getElementById("player2_name").innerHTML = localStorage.getItem("player2_name");
+
+  document.getElementById("player1_score").innerHTML = localStorage.getItem("player1_score");
+  document.getElementById("player2_score").innerHTML = localStorage.getItem("player2_score");
+
+</script>
+
+<div class="container">
+    <center>
+      <h2 style="color: white;">The Math Quiz Game</h2>
+      <h3 id="player_question"></h3>
+      <h3 id="player_answer"></h3>
+      <div class="output" class="col-lg-6"></div>
+      <br>
+      <br>
+      
+      <br><label>Question Turn - </label> <label id="playerA_name"></label><br>
+      <br><label>Answer Turn </label> <label id="playerB_name"></label><br>
+
+      <script>
+        document.getElementById("playerA_name").innerHTML = localStorage.getItem("player1_name");
+        document.getElementById("playerB_name").innerHTML = localStorage.getItem("player2_name");
+      </script>      
+      
+      <div id="output" class="col-lg-6"> </div>
+      
+      <input type="text" id="number_1" class="from-control" placeholder="Number 1">
+      <br>
+      <input type="text" id="number_2" class="from-control" placeholder="Number 2">
+      <br>
+      <button onclick="send()" class="btn btn-success" style="width: 30%;">Send</button>
+    </center>
+</div>
+
+<script src="game_login.js"></script>
+</body>
+</html>
+
+
+
+
+  
+
+
